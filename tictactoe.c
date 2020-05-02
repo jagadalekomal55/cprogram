@@ -21,17 +21,13 @@ int main()
     {
       displayBoard();
 
-      // change turns
       player = (player % 2) ? 1 : 2;
-
-      // get input
+  
       printf("Player %d, enter a number: ", player);
       scanf("%d", &choice);
 
-      // set the correct character based on player turn
       mark = (player == 1) ? 'X' : 'O';
 
-      // set board based on user choice or invalid choice
       markBoard(mark);
 
       gameStatus = checkForWin();
